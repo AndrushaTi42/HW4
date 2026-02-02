@@ -58,20 +58,18 @@ void main() {
     System.out.println("Задание №6:");
     int seatingCapacity = 102;
     int seatingPlace = 60;
-    int passenger = 66;
+    int passenger = 55;
     int freePlace = seatingCapacity - passenger;
-    if (seatingCapacity > passenger) {
-        System.out.println("В вагоне ещё " + freePlace + " свободных мест");
+    if (seatingPlace > passenger) {
+        System.out.println("В вагоне есть сидячие места.");
     } else {
-        System.out.println("В вагоне нет свободных мест.");
+        if (seatingCapacity > passenger) {
+            System.out.println("В вагоне есть места, но только стоячие.");
+        } else {
+            System.out.println("В вагоне нет мест.");
+        }
     }
-    boolean freeSeatingPlace = seatingPlace > passenger;
-    if (freeSeatingPlace && passenger < seatingCapacity) {
-        System.out.println("Ещё остались сидячие места.");
-    }
-    if (freePlace < passenger && passenger < seatingCapacity) {
-        System.out.println("Остались только стоячие места.");
-    }
+
 
     System.out.println("Задание №7:");
 
